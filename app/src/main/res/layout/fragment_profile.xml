@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_200"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#40D6C6"
+            android:weightSum="3">
+
+
+            <ImageView
+                android:layout_width="106dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:onClick="amazon"
+                android:background="@drawable/amazon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=".in"
+                android:textSize="23dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:onClick="notification"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="6dp"
+
+                android:background="@drawable/ic_baseline_notifications_none_24" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="35dp"
+                android:onClick="search"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/ic_baseline_search_24" />
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#D0FAF4"
+
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello,"
+                    android:textSize="30dp"
+                    android:textStyle="normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Saikrishna"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="81dp"
+                    android:layout_height="match_parent"
+                    android:onClick="contact"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    android:layout_marginLeft="90dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:text="Your Orders"
+                        android:background="@drawable/cornors"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="button1"
+
+                        android:textColor="@color/black"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:layout_marginRight="20dp"
+                        android:text="Buy Again"
+                        android:onClick="button2"
+                        android:textColor="@color/black"
+                        android:background="@drawable/cornors"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="Your Account"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="button3"
+                        android:background="@drawable/cornors"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cornors"
+                        android:text="Your Wish List"
+                        android:textAllCaps="false"
+                        android:onClick="button4"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Yours Orders"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:onClick="yourorders"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Hi! You have no recent orders."
+
+                    android:textSize="20dp"/>
+
+                <Button
+
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:text="Return to the HomePage"
+                    android:onClick="button5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#C9AEABAB"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Wish List"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:onClick="yourwishlist"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="You haven't created any lists."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:textAllCaps="false"
+                android:onClick="button6"
+                android:textColor="@color/black"
+                android:text="Create a List" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#C9AEABAB"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Your Account"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:onClick="youraccount"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="160dp"
+                        android:text="See all"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:onClick="seeall"
+                        android:textColor="#547370"
+
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+
+                            <Button
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="180dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:textColor="@color/black"
+                                android:textAllCaps="false"
+                                android:onClick="b1"
+
+                                android:text="Your Orders" />
+
+                            <Button
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="180dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:onClick="b2"
+                                android:text="Your Addresses"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:textAllCaps="false"
+                                android:onClick="b3"
+                                android:textColor="@color/black"
+                                android:text="@string/button2" />
+
+                            <Button
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:textAllCaps="false"
+                                android:layout_margin="10dp"
+                                android:onClick="b4"
+                                android:textColor="@color/black"
+                                android:text="Manage Your Profiles" />
+
+                            <Button
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="180dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:textAllCaps="false"
+                                android:onClick="b5"
+                                android:textColor="@color/black"
+                                android:text="Amazon Pay UPI" />
+
+                            <Button
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:textAllCaps="false"
+                                android:onClick="b6"
+                                android:textColor="@color/black"
+                                android:text="@string/button1" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#C9AEABAB" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Buy Again"
+                        android:onClick="Buyagain"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/button3"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <Button
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_margin="10dp"
+                        android:onClick="visit"
+                        android:text="Visit Buy Again"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:background="#C9AEABAB"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
